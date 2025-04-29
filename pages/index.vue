@@ -1,16 +1,28 @@
 <template>
-  <DefaultLayout>
-    <v-row>
-      <v-col cols="12">
-        <h1 class="text-h3 mb-4">Welcome to Twinspeak UI</h1>
-        <p class="text-body-1">
-          This is a modern web application built with Nuxt 3, Vue 3, Vuetify, and Pinia.
-        </p>
-      </v-col>
-    </v-row>
-  </DefaultLayout>
+  <div class="home">
+    <h1>Welcome to Twinspeak</h1>
+    <p>This is your dashboard. More features coming soon!</p>
+  </div>
 </template>
 
-<script setup lang="ts">
-import DefaultLayout from '~/components/templates/DefaultLayout.vue';
-</script> 
+<script setup>
+definePageMeta({
+  layout: 'authenticated'
+})
+</script>
+
+<style scoped>
+.home {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+}
+</style> 

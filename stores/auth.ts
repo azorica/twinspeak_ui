@@ -1,9 +1,8 @@
 import { defineStore } from 'pinia';
 
 interface User {
-  id: string;
-  name: string;
   email: string;
+  name: string;
 }
 
 interface AuthState {
@@ -23,9 +22,17 @@ export const useAuthStore = defineStore('auth', {
   },
 
   actions: {
-    login(userData: User) {
-      this.user = userData;
-      this.isAuthenticated = true;
+    async login(email: string, password: string) {
+      // Mock authentication
+      if (email === 'ante@gostudion.com' && password === 'Ante123+') {
+        this.user = {
+          email: 'ante@gostudion.com',
+          name: 'Ante'
+        }
+        this.isAuthenticated = true
+        return true
+      }
+      return false
     },
 
     logout() {
