@@ -27,7 +27,6 @@ export const Primary: Story = {
   args: {
     color: 'primary',
     variant: 'elevated',
-    children: 'Primary Button',
   },
   render: (args) => ({
     components: { Button },
@@ -42,7 +41,6 @@ export const Secondary: Story = {
   args: {
     color: 'secondary',
     variant: 'outlined',
-    children: 'Secondary Button',
   },
   render: (args) => ({
     components: { Button },
@@ -58,7 +56,6 @@ export const Disabled: Story = {
     color: 'primary',
     variant: 'elevated',
     disabled: true,
-    children: 'Disabled Button',
   },
   render: (args) => ({
     components: { Button },

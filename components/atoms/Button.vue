@@ -12,6 +12,8 @@
 </template>
 
 <script setup lang="ts">
+import { defineProps, defineEmits } from 'vue';
+
 defineProps<{
   color?: string;
   variant?: 'text' | 'flat' | 'elevated' | 'tonal' | 'outlined' | 'plain';
